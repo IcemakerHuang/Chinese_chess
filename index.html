@@ -13,8 +13,6 @@
             box-sizing: border-box;
         }
 
-        body {}
-
         .container {
             /* width: 1200px; */
             margin: 0 auto;
@@ -80,20 +78,43 @@
         }
 
         /* 將帥斜線 */
-        .grid:nth-child(1) .square:nth-child(4) {
+        .grid:nth-child(1) .square:nth-child(4),
+        .grid:nth-child(1) .square:nth-child(5),
+        .grid:nth-child(2) .square:nth-child(4),
+        .grid:nth-child(2) .square:nth-child(5),
+        .grid:nth-child(8) .square:nth-child(4),
+        .grid:nth-child(8) .square:nth-child(5),
+        .grid:nth-child(9) .square:nth-child(4),
+        .grid:nth-child(9) .square:nth-child(5) {
             position: relative;
         }
 
-        .grid:nth-child(1) .square:nth-child(4)::before {
+        .slash::before {
             content: "";
             display: block;
             width: 127.3px;
-            height: 1px;
+            height: 0.5px;
             background: #000;
+        }
+
+        .grid:nth-child(1) .square:nth-child(4)::before,
+        .grid:nth-child(2) .square:nth-child(5)::before,
+        .grid:nth-child(8) .square:nth-child(4)::before,
+        .grid:nth-child(9) .square:nth-child(5)::before {
             transform: rotate(45deg);
             position: absolute;
             top: 44px;
-            left: -18px;
+            left: -19.5px;
+        }
+
+        .grid:nth-child(1) .square:nth-child(5)::before,
+        .grid:nth-child(2) .square:nth-child(4)::before,
+        .grid:nth-child(8) .square:nth-child(5)::before,
+        .grid:nth-child(9) .square:nth-child(4)::before {
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 44px;
+            left: -19px;
         }
     </style>
 </head>
@@ -106,8 +127,8 @@
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
+                <div class="square slash"></div>
+                <div class="square slash"></div>
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
@@ -116,8 +137,8 @@
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
+                <div class="square slash"></div>
+                <div class="square slash"></div>
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
@@ -173,8 +194,8 @@
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
+                <div class="square slash"></div>
+                <div class="square slash"></div>
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
@@ -183,8 +204,8 @@
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
-                <div class="square"></div>
-                <div class="square"></div>
+                <div class="square slash"></div>
+                <div class="square slash"></div>
                 <div class="square"></div>
                 <div class="square"></div>
                 <div class="square"></div>
